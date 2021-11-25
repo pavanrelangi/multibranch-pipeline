@@ -4,9 +4,9 @@ pipeline {
 
    stages {
    
-     stage('Install Dependencies') { 
+     stage('Install python') { 
         steps { 
-           sh 'npm install' 
+           sh 'yum install python' 
         }
      }
      
