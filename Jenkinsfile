@@ -4,9 +4,9 @@ pipeline {
 
    stages {
    
-     stage('Install python') { 
+     stage('Install clean') { 
         steps { 
-           sh 'yum install python' 
+           sh 'mvn clean install' 
         }
      }
      
