@@ -4,11 +4,16 @@ pipeline {
 
    stages {
    
-     stage('Install clean') { 
-        steps { 
-           sh 'mvn clean install' 
-        }
-     }
+
+   
+
+stage('git checkout') {
+
+steps {
+
+git branch: 'dev', url: 'https://github.com/pavanrelangi/multibranch-pipeline.git'
+
+}
      
      stage('Test') { 
         steps { 
